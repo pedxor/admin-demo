@@ -18,11 +18,9 @@
 ## Getting Started
 
 ```bash
-npx degit lzm0x219/template-vite-react myapp
+pnpm i
 
-cd myapp
-
-git init
+pnpm dev
 ```
 
 ### Prerequisites
