@@ -17,14 +17,14 @@ const MySidebar: React.FC = () => {
       >
         <Menu>
           <MenuItem
-            className="bg-light flex h-22 w-full items-center justify-center logo-icon"
-            component={<Link to="/" />}
+            className="bg-light logo-icon flex h-22 w-full items-center justify-center"
+            component={<Link to="#" />}
             icon={<img src={logo} alt="Logo" className="h-full w-full" />}
           ></MenuItem>
 
           <MenuItem
             className="bg-light-secondary menu-item"
-            component={<Link to="/home" />}
+            component={<Link to="#" />}
             icon={<BiHomeAlt />}
           >
             Home
@@ -32,14 +32,14 @@ const MySidebar: React.FC = () => {
 
           <MenuItem
             className="bg-light-secondary menu-item"
-            component={<Link to="/tasks-completed" />}
+            component={<Link to="#" />}
             icon={<LuSquareCheck />}
           >
             Tasks Completed
           </MenuItem>
 
-          <div className="bg-light-secondary py-4 w-auto">
-            <div className="w-10 border-t border-primary-dark mx-auto"></div>
+          <div className="bg-light-secondary w-auto py-4">
+            <div className="border-primary-dark mx-auto w-10 border-t"></div>
           </div>
 
           {[...Array(4)].map((_, index) => (
