@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3075ff;
+  --color-primary-dark: #111d3f;
+  --color-secondary: #e7f1fa;
+  --color-light: #fafafa;
+  --color-light-secondary: #f2f2f2;
+  --color-light-tertiary: #6c9eff;
+  --color-dark: #33393e;
+  --color-ui-1: #ffe4f7;
+  --color-ui-2: #e7f1fa;
+  --color-ui-3: #e4f9e8;
+  --color-ui-4: #e7f1fa;
+}
+
+@layer base {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    color: var(--color-primary-dark);
+  }
+
+  h1 {
+    @apply text-4xl font-bold;
+  }
+  h2 {
+    @apply text-3xl font-bold;
+  }
+  h3 {
+    @apply text-2xl font-bold;
+  }
+  h4 {
+    @apply text-xl font-bold;
+  }
+  h5 {
+    @apply text-lg font-bold;
+  }
+  h6 {
+    @apply text-base font-bold;
+  }
+  p {
+    @apply text-base;
+  }
+  a {
+    color: var(--color-blue-600);
+    text-decoration-line: underline;
+  }
+  button,
+  a {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  main {
+    @apply mx-auto;
+  }
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.order-confirmation {
+  background: var(--color-ui-1);
+}
+
+.invoice {
+  background: var(--color-ui-2);
+}
+
+.delivery-note {
+  background: var(--color-ui-3);
+}
+
+.peloton {
+  background: var(--color-ui-4);
+}
+
+.logo-icon a {
+  height: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.logo-icon .ps-menu-icon {
+  width: 100%;
+  height: 100%;
+  margin-right: 0 !important;
+}
+
+.menu-item .ps-menu-icon {
+  width: 50%;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+
+  & svg {
+    --size: 25px;
+    width: var(--size);
+    height: var(--size);
+  }
+}
+
+.menu-item a:hover .ps-menu-icon {
+  background-color: white;
+}
