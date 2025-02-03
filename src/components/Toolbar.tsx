@@ -7,8 +7,8 @@ interface ToolbarProps {
 
 const Toolbar: FC<ToolbarProps> = ({ name = "AJ" }) => {
   return (
-    <div className="flex flex-row items-center justify-between gap-2 bg-light-secondary py-6 px-5">
-      <div className="relative w-70 me-auto">
+    <div className="bg-light-secondary flex flex-row items-center justify-between gap-2 px-5 py-6">
+      <div className="relative me-auto w-70">
         <FiSearch className="absolute top-3 left-3 text-gray-600" />
         <input
           type="text"
@@ -17,17 +17,17 @@ const Toolbar: FC<ToolbarProps> = ({ name = "AJ" }) => {
         />
       </div>
 
-      <button className="grid h-10 w-10 place-items-center text-primary-dark transition-colors hover:text-gray-800">
+      <button className="text-primary-dark grid h-10 w-10 place-items-center transition-colors hover:text-gray-800">
         <FiSettings className="text-2xl" />
       </button>
 
-      <button className="grid h-10 w-10 place-items-center text-primary-dark transition-colors hover:text-gray-800">
+      <button className="text-primary-dark grid h-10 w-10 place-items-center transition-colors hover:text-gray-800">
         <FiInfo className="text-2xl" />
       </button>
 
-      <div className="ml-2 grid h-10 w-10 place-items-center rounded-full bg-white font-bold text-primary-dark uppercase">
+      <button className="text-primary-dark ml-2 grid h-10 w-10 place-items-center rounded-full bg-white font-bold uppercase">
         {name.slice(0, 2)}
-      </div>
+      </button>
     </div>
   );
 };
